@@ -63,7 +63,16 @@ class Page_0 extends Component {
   }
   render() {
     return (
-      <div style={styles.box}>
+      <div
+        className=""
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-around',
+          alignItems: 'flex-start',
+          height: '16.69rem'
+        }}
+      >
         {this.state.data.map((item, index) => {
           return (
             <div
@@ -74,35 +83,175 @@ class Page_0 extends Component {
               data-url={item.url}
               key={item.index}
             >
-              <div style={styles.bd}>
-                <img style={styles.layer} src={'https://img.alicdn.com/tfs/TB1bLoWoYH1gK0jSZFwXXc7aXXa-684-684.png'} />
-                <img style={styles.bg} src={item.coverImage} />
-                <div style={styles.wrap}>
+              <div
+                className=""
+                style={{
+                  display: 'flex',
+                  position: 'relative',
+                  alignItems: 'flex-start',
+                  flexDirection: 'row',
+                  opacity: '1.00',
+                  width: '10.69rem',
+                  height: '10.69rem'
+                }}
+              >
+                <img
+                  className=""
+                  style={{
+                    position: 'absolute',
+                    top: '0.00rem',
+                    left: '0.00rem',
+                    width: '10.69rem',
+                    height: '10.69rem',
+                    overflow: 'hidden'
+                  }}
+                  src={'https://img.alicdn.com/tfs/TB1bLoWoYH1gK0jSZFwXXc7aXXa-684-684.png'}
+                />
+                <img
+                  className=""
+                  style={{
+                    position: 'absolute',
+                    top: '0.00rem',
+                    left: '0.00rem',
+                    opacity: '1.00',
+                    width: '10.69rem',
+                    height: '10.69rem'
+                  }}
+                  src={item.coverImage}
+                />
+                <div
+                  className=""
+                  style={{
+                    boxSizing: 'border-box',
+                    display: 'flex',
+                    position: 'relative',
+                    alignItems: 'center',
+                    flexDirection: 'row',
+                    marginTop: '0.56rem',
+                    marginLeft: '0.56rem',
+                    borderRadius: '0.47rem',
+                    backgroundColor: 'rgba(0,0,0,0.40)',
+                    paddingRight: '0.28rem',
+                    paddingLeft: '0.31rem',
+                    height: '0.94rem'
+                  }}
+                >
                   <img
-                    style={styles.riverdinwei}
+                    className=""
+                    style={{ opacity: '1.00', width: '0.44rem', height: '0.56rem' }}
                     src={'https://img.alicdn.com/tfs/TB1mtZRoVT7gK0jSZFpXXaTkpXa-28-36.png'}
                   />
-                  <span style={styles.distance}>距离500m</span>
+                  <span
+                    className=""
+                    style={{
+                      marginLeft: '0.13rem',
+                      height: '0.69rem',
+                      fontWeight: 400,
+                      fontSize: '0.56rem',
+                      color: '#ffffff',
+                      lineHeight: '0.69rem',
+                      whiteSpace: 'nowrap'
+                    }}
+                  >
+                    距离500m
+                  </span>
                 </div>
               </div>
-              <div style={styles.main}>
-                <span style={styles.title}>{item.title}</span>
+              <div
+                className=""
+                style={{
+                  display: 'flex',
+                  alignItems: 'flex-start',
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  backgroundColor: '#ffffff',
+                  width: '10.69rem',
+                  height: '3.56rem'
+                }}
+              >
+                <span
+                  className=""
+                  style={{
+                    marginTop: '0.69rem',
+                    width: '9.38rem',
+                    height: '2.75rem',
+                    fontWeight: 400,
+                    fontSize: '0.94rem',
+                    color: '#335c0a',
+                    lineHeight: '1.38rem',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis'
+                  }}
+                >
+                  {item.title}
+                </span>
               </div>
-              <div style={styles.ft}>
-                <div style={styles.block}>
+              <div
+                className=""
+                style={{
+                  boxSizing: 'border-box',
+                  display: 'flex',
+                  alignItems: 'center',
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  borderBottomLeftRadius: '0.38rem',
+                  borderBottomRightRadius: '0.38rem',
+                  backgroundColor: '#ffffff',
+                  paddingRight: '0.53rem',
+                  paddingLeft: '0.56rem',
+                  width: '10.69rem',
+                  height: '2.44rem',
+                  overflow: 'hidden'
+                }}
+              >
+                <div
+                  className=""
+                  style={{ display: 'flex', alignItems: 'center', flexDirection: 'row', height: '0.94rem' }}
+                >
                   <img
-                    style={styles.xianjin}
+                    className=""
+                    style={{ width: '0.94rem', height: '0.94rem' }}
                     src={'https://img.alicdn.com/tfs/TB1OvsYoW61gK0jSZFlXXXDKFXa-60-60.png'}
                   />
-                  <span style={styles.fashionHome}>{item.user.userName}</span>
+                  <span
+                    className=""
+                    style={{
+                      marginLeft: '0.19rem',
+                      height: '0.88rem',
+                      fontWeight: 300,
+                      fontSize: '0.75rem',
+                      color: '#66b814',
+                      lineHeight: '0.88rem',
+                      whiteSpace: 'nowrap'
+                    }}
+                  >
+                    {item.user.userName}
+                  </span>
                 </div>
                 {this.isReadCountShow(item.readCount) && (
-                  <div style={styles.group}>
+                  <div
+                    className=""
+                    style={{ display: 'flex', alignItems: 'center', flexDirection: 'row', height: '0.94rem' }}
+                  >
                     <img
-                      style={styles.favorite}
+                      className=""
+                      style={{ width: '0.69rem', height: '0.69rem' }}
                       src={'https://img.alicdn.com/tfs/TB1arwYo7T2gK0jSZFkXXcIQFXa-46-44.png'}
                     />
-                    <span style={styles.num}>{item.readCount}</span>
+                    <span
+                      className=""
+                      style={{
+                        marginLeft: '0.16rem',
+                        height: '0.81rem',
+                        fontWeight: 400,
+                        fontSize: '0.69rem',
+                        color: '#99eb47',
+                        lineHeight: '0.81rem',
+                        whiteSpace: 'nowrap'
+                      }}
+                    >
+                      {item.readCount}
+                    </span>
                   </div>
                 )}
               </div>
